@@ -1,0 +1,105 @@
+:root{
+    --white-color: #fff;
+    --black-color: #000;
+}
+
+*{
+	outline: 0;
+	scrollbar-width: none;
+	box-sizing: border-box;
+	-ms-overflow-style: none;
+	-webkit-font-smoothing: antialiased;
+	&::-webkit-scrollbar {
+        display: none;
+	}
+}
+
+html,
+body{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+	font-size: 16px;
+}
+
+body{
+	background: #ccc;
+	//font-family: 'sofia-pro', sans-serif
+}
+
+a{
+	text-decoration: none;
+}
+
+p{
+	margin: 0;
+}
+
+
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	margin: 0;
+}
+
+section{
+	position: relative;
+}
+
+#viewport{
+	width: 100%;
+	margin: 0 auto;
+	max-width: 100%;
+    min-height: 100lvh;
+    //min-height: 100lvh;
+	#pageWrapper{
+		#pageContent{
+			main{
+				
+			}
+		}
+	}
+}
+
+.cbg{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.btn{
+	background: none;
+	margin: 0;
+	padding: 0;
+	border: none;
+	cursor: pointer;
+	span{
+		//font-family: 'sofia-pro', sans-serif
+	}
+}
+
+.hideForSeo{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+input,
+select,
+textarea{
+	//font-family: 'sofia-pro', sans-serif;
+}
