@@ -12,4 +12,4 @@ If you need a backend:
 2. Place your React App inside the frontend and your admin files inside the backend. Your backend can be in JavaScript, PHP, etc.
 3. Run a local (or online) server for your frontend app. You can automaticly do that with this repo. Use command `npm run start`.
 4. Run a local (or online) server for your backend.
-5. Use proxy from package.json to call your admin url when you fetch between your frontend and backend.
+5. Use proxy from package.json to call your admin url when you fetch between your frontend and backend if needed.
