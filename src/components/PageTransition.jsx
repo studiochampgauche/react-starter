@@ -15,26 +15,51 @@ const PageTransition = ({ children }) => {
 	
 	useEffect(() => {
 		
+		const elements = document.querySelectorAll('[data-transition=true]');
+		if(!elements.length) return;
 		
-		document.querySelectorAll('a, .transit').forEach(item => {
+		
+		const events = [];
+		
+		elements.forEach(item => {
 			
-			item.addEventListener('click', (e) => {
+			const handleClick = (e) => {
 				
+				if(!item.hasAttribute('data-transition') || item.getAttribute('data-transition') !== 'true') return;
+			
 				e.preventDefault();
-				
+
 				if(!canTransit.current) return;
 				canTransit.current = false;
-				
-				
-				to.current = item.hasAttribute('href') ? item.getAttribute('href') : (item.getAttribute('data-to') ? item.getAttribute('data-to') : null);
-				
+
+
+				to.current = item.getAttribute('href') || item.getAttribute('data-to');
+
 				if(!to.current) return;
-				
+
 				setIsLeaving(true);
+				
+			}
+			
+			
+			item.addEventListener('click', handleClick);
+			events.push({element: item, event: handleClick});
+			
+		});
+		
+		
+		
+		return () => {
+			
+			if(!events.length) return;
+			
+			events.forEach(({ element, event }) => {
+				
+				element.removeEventListener('click', event);
 				
 			});
 			
-		});
+		}
 		
 		
 	});

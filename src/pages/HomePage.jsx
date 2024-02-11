@@ -22,7 +22,7 @@ const HomePage = () => {
 	return(
 		<>
 			<p>Is front</p>
-			<Link to="/test1">Go 404</Link>
+			<Link to="/test1" data-transition="true">Go 404</Link>
 			<section id="h__intro">
 				<div className="corps">
 					
