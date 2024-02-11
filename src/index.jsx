@@ -16,27 +16,27 @@ const root = createRoot(mainNode);
 const App = () => {
 	
 	return (
-		<PageTransition>
-			<Header />
-			<div id="pageWrapper">
-				<div id="pageContent">
-					<main>
-						<Routes>
-							<Route path="/" exact element={<HomePage />} />
-							<Route path="*" element={<NotFoundPage />} />
-						</Routes>
-					</main>
+		<Router>
+			<PageTransition>
+				<Header />
+				<div id="pageWrapper">
+					<div id="pageContent">
+						<main>
+							<Routes>
+								<Route path="/" exact element={<HomePage />} />
+								<Route path="*" element={<NotFoundPage />} />
+							</Routes>
+						</main>
+					</div>
 				</div>
-			</div>
-			<Footer />
-		</PageTransition>
+				<Footer />
+			</PageTransition>
+		</Router>
 	);
 };
 
 root.render(
 	<StrictMode>
-		<Router>
-			<App />
-		</Router>
+		<App />
 	</StrictMode>
 );
