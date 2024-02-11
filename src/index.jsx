@@ -1,7 +1,8 @@
-import React, {StrictMode} from 'react'
+import React, { StrictMode } from 'react'
 //import ReactDOM from 'react-dom'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import PageTransition from './components/PageTransition.jsx'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 import HomePage from './pages/HomePage.jsx'
@@ -13,8 +14,9 @@ const root = createRoot(mainNode);
 
 
 const App = () => {
+	
 	return (
-		<Router>
+		<PageTransition>
 			<Header />
 			<div id="pageWrapper">
 				<div id="pageContent">
@@ -27,12 +29,14 @@ const App = () => {
 				</div>
 			</div>
 			<Footer />
-		</Router>
+		</PageTransition>
 	);
 };
 
 root.render(
 	<StrictMode>
-		<App />
+		<Router>
+			<App />
+		</Router>
 	</StrictMode>
 );
