@@ -1,12 +1,11 @@
 import React, { useEffect, useState, useRef } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { gsap } from "gsap";
 
 const PageTransition = ({ children }) => {
 	
 	
-	const navigate = useNavigate();
-	const location = useLocation();
+	const navigateRef = useRef(useNavigate());
 	
 	const [isLeaving, setIsLeaving] = useState(false);
 	const [isEntering, setIsEntering] = useState(false);
@@ -33,8 +32,6 @@ const PageTransition = ({ children }) => {
 				
 				setIsLeaving(true);
 				
-				console.log(location.pathname);
-				
 			});
 			
 		});
@@ -47,18 +44,30 @@ const PageTransition = ({ children }) => {
 		
 		if(!isLeaving) return;
 		
-		gsap.to('main', 1, {
-			opacity: 0,
+		const tl = gsap.timeline({
 			onComplete: () => {
 				
 				setIsLeaving(false);
 				setIsEntering(true);
 				
 				
-				navigate(to.current);
+				navigateRef.current(to.current);
 				
 			}
 		});
+		
+		
+		tl
+		.to('main', .2, {
+			opacity: 0
+		});
+		
+		
+		return () => {
+			
+			tl.kill();
+			
+		}
 		
 		
 	}, [isLeaving]);
@@ -68,8 +77,8 @@ const PageTransition = ({ children }) => {
 		
 		if(!isEntering) return;
 		
-		gsap.to('main', .2, {
-			opacity: 1,
+		
+		const tl = gsap.timeline({
 			onComplete: () => {
 				
 				setIsEntering(false);
@@ -78,8 +87,21 @@ const PageTransition = ({ children }) => {
 			}
 		});
 		
+		tl
+		.to('main', .2, {
+			opacity: 1
+		});
+		
+		
+		return () => {
+			
+			tl.kill();
+			
+		}
+		
 		
 	}, [isEntering]);
+	
 	
 	return(
 		 <>
