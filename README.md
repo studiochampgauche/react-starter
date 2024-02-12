@@ -1,4 +1,4 @@
-# React Single Page App (SPA)
+# React Single Page App (SPA) with Page Transition
 
 ## Guide
 1. Clone this repo
