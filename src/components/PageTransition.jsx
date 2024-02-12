@@ -24,8 +24,6 @@ const PageTransition = ({ children }) => {
 		elements.forEach(item => {
 			
 			const handleClick = (e) => {
-				
-				if(!item.hasAttribute('data-transition') || item.getAttribute('data-transition') !== 'true') return;
 			
 				e.preventDefault();
 
