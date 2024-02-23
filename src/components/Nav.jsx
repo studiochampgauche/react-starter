@@ -1,24 +1,20 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom';
 
-const MainNav = (props) => {
+const MainNav = () => {
 	
 	const navItems = [
-		{title: 'Teste 1', to: '/test1'},
-		{title: 'Teste 2', to: '/test2'}
+		{title: 'Home', to: '/', 'data-transition': true},
+		{title: '404 error Page', to: '/test2', 'data-transition': true}
 	];
 	
 	useEffect(() => {
-		
-		/*
-		* Events here
-		*/
+        
+        
 		
 		return () => {
-			
-			/*
-			* Kill events here
-			*/
+            
+            
 			
 		}
 		
@@ -28,9 +24,10 @@ const MainNav = (props) => {
 		<nav>
 			<ul>
 			{
-				navItems.map((item, i) => (
+				navItems.map(({ title, ...attr }, i) => (
+                    
 					<li key={i}>
-						<Link to={item.to}>{item.title}</Link>
+						<Link {...attr}>{title}</Link>
 					</li>
 				))
 			}
