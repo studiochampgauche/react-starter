@@ -4,7 +4,7 @@ const MainLogo = (props) => {
 	
 	return(
 		<>
-		<img src={Logo} alt={props.alt} />
+		<img src={Logo} alt={props.alt || window.metadata.siteName} {...props} />
 		</>
 	)
 	
