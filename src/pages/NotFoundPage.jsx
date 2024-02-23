@@ -23,6 +23,7 @@ const NotFound = () => {
                     
                 </div>
             </section>
+            <section style={{ background: '#ff0000', height: '100lvh' }}></section>
 		</>
 	);
 	
