@@ -17,11 +17,6 @@ const Transitor = ({ children }) => {
     
     useEffect(() => {
         
-        /*
-        * Change Metas
-        */
-        document.title = window.metadata.pageName + ' - ' + window.metadata.siteName;
-        
         
         /*
         * Make sure you start on position 0 on transition
