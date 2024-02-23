@@ -2,6 +2,7 @@ import { StrictMode } from 'react'
 //import ReactDOM from 'react-dom'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Metas from './components/Metas.jsx'
 import Scroller from './components/Scroller.jsx'
 import Transitor from './components/Transitor.jsx'
 import Header from './components/Header.jsx'
@@ -14,17 +15,11 @@ const mainNode = document.getElementById('viewport');
 const root = createRoot(mainNode);
 
 
-window.gscroll = null;
-
-window.metadata = {
-    siteName: 'My App'
-}
-
-
 const App = () => {
     
 	return (
 		<Router>
+            <Metas />
             <Header />
             <Scroller>
                 <Transitor>
