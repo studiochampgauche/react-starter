@@ -1,8 +1,9 @@
-import React, { StrictMode } from 'react'
+import { StrictMode } from 'react'
 //import ReactDOM from 'react-dom'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import PageTransition from './components/PageTransition.jsx'
+import Scroller from './components/Scroller.jsx'
+import Transitor from './components/Transitor.jsx'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 import HomePage from './pages/HomePage.jsx'
@@ -13,26 +14,33 @@ const mainNode = document.getElementById('viewport');
 const root = createRoot(mainNode);
 
 
+window.gscroll = null;
+
+window.metadata = {
+    siteName: 'My App'
+}
+
+
 const App = () => {
-	
+    
 	return (
 		<Router>
-			<PageTransition>
-				<Header />
-				<div id="pageWrapper">
-					<div id="pageContent">
-						<main>
-							<Routes>
-								<Route path="/" exact element={<HomePage />} />
-								<Route path="*" element={<NotFoundPage />} />
-							</Routes>
-						</main>
-					</div>
-				</div>
-				<Footer />
-			</PageTransition>
+            <Header />
+            <Scroller>
+                <Transitor>
+                    
+                    <Routes>
+                        <Route path="/" exact element={<HomePage />} />
+                        <Route path="*" element={<NotFoundPage />} />
+                    </Routes>
+                    
+                    <Footer />
+                    
+                </Transitor>
+            </Scroller>
 		</Router>
 	);
+    
 };
 
 root.render(
