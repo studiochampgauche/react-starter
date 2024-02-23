@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 
 const Scroller = ({ children }) => {
 	
+    window.gscroll = null;
 	
 	useEffect(() => {
 		
