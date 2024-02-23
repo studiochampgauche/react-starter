@@ -32,10 +32,17 @@ const Metas = () => {
         */
         const robots = () => {
             
-            if(!window.metadata.robots || !Object.keys(window.metadata.robots).length) return;
-            
-            
             let meta = document.querySelector('meta[name=robots]');
+            
+            if(!window.metadata.robots || !Object.keys(window.metadata.robots).length){
+                
+                if(meta) meta.remove();
+                
+                return;
+            }
+            
+            
+            
             if(!meta){
                 
                 meta = document.createElement('meta');
