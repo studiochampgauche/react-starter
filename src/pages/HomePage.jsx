@@ -1,19 +1,16 @@
 import { useEffect } from 'react'
-import { Link } from 'react-router-dom';
-
 
 const HomePage = () => {
 	
+    window.metadata.pageName = 'Home';
+    
+    
 	useEffect(() => {
-		
-		document.title = 'Mon app'
 		
 		
 		return () => {
-			
-			/*
-			* Kill Instance and Events here.
-			*/
+            
+            
 			
 		}
 		
@@ -21,8 +18,6 @@ const HomePage = () => {
 	
 	return(
 		<>
-			<p>Is front</p>
-			<Link to="/test1" data-transition="true">Go 404</Link>
 			<section id="h__intro">
 				<div className="corps">
 					

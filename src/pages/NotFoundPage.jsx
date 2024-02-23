@@ -1,18 +1,28 @@
 import { useEffect } from 'react'
-import { Link } from 'react-router-dom';
 
 const NotFound = () => {
 	
+    window.metadata.pageName = '404 Error';
+    
+    
 	useEffect(() => {
-		
-		document.title = 'Erreur 404 - Mon app'
+        
+        
+        return () => {
+            
+            
+            
+        }
 		
 	})
 	
 	return(
 		<>
-			<p>Is 404</p>
-			<Link to="/">Go Home</Link>
+			<section id="not__intro">
+                <div className="corps">
+                    
+                </div>
+            </section>
 		</>
 	);
 	
