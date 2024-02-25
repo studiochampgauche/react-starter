@@ -15,7 +15,7 @@
 Import `{ Link }` or `{ useNavigate }` from `react-router-dom` and use them for load your pages without reloading. For examples, we use useNavigate() in Transitor.jsx for load a page in a specific moment and `<Link>` in Nav.jsx.
 
 ### Smooth Transitions between Pages
-Manage animations between your pages with GSAP in Transitor.jsx. Fluid fadeOut/fadeIn is set by default on `<main>` HTML Element.
+Manage animations between your pages in the Transitor.jsx component file. Fluid fadeOut/fadeIn based on GSAP is set by default on `<main>` HTML Element.
 
 Call transition by adding `data-transition="true"` to your elements. If elements don't have `href` attribute, add `data-to` attribute on each.
 
