@@ -2,14 +2,17 @@
 > [!IMPORTANT]  
 > This repo is based on `npx create-react-app` with minimal edits for respond quickly to our clients.
 
+> [!CAUTION]  
+> Metas component is new and not completed. You can remove it from the index.jsx file.
+
+
 ## Guide
 1. Clone this repo
 1. Install your node modules `npm i`
 2. Run your project locally `npm run start`
 
 
-> [!CAUTION]  
-> Metas component is new and not completed. You can remove it from the index.jsx file.
+
 
 ## Features
 
