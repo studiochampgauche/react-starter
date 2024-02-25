@@ -25,7 +25,7 @@ const Transitor = ({ children }) => {
         
 		
         /*
-        * Animate transition
+        * Create click events and call transition
         */
 		const elements = document.querySelectorAll('[data-transition=true]');
 		if(!elements.length) return;
