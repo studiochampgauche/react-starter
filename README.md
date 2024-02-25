@@ -17,7 +17,7 @@
 ## Features
 
 ### Single Page App
-Import `{ Link }` or `{ useNavigate }` from `react-router-dom` and use them for load your pages without reloading. For examples, we use useNavigate() in Transitor.jsx for load a page in a specific moment and `<Link>` in Nav.jsx.
+Import `{ Link }` or `{ useNavigate }` from `react-router-dom` and use them for get your pages without reloading. For examples, we use useNavigate() in Transitor.jsx for get a page loaded in a specific moment and `<Link>` in Nav.jsx.
 
 ### Smooth Transitions between Pages
 Manage animations between your pages in the Transitor.jsx component file. Fluid fadeOut/fadeIn based on GSAP is set by default on `<main>` HTML Element.
