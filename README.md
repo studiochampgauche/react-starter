@@ -1,4 +1,6 @@
 # React Starter
+> [!IMPORTANT]  
+> This repo is based on `npx create-react-app` with minimal edits for respond quickly to our clients.
 
 ## Guide
 1. Clone this repo
