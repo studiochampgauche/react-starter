@@ -77,6 +77,9 @@ const Transitor = ({ children }) => {
 	}, [pathname]);
 	
 	
+    /*
+    * isLeaving transition
+    */
 	useEffect(() => {
 		
 		if(!isLeaving) return;
@@ -119,6 +122,9 @@ const Transitor = ({ children }) => {
 	}, [isLeaving]);
 	
 	
+    /*
+    * isEntering transition
+    */
 	useEffect(() => {
 		
 		if(!isEntering) return;
