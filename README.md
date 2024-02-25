@@ -6,6 +6,9 @@
 2. Run your project locally `npm run start`
 
 
+> [!CAUTION]  
+> Metas component is new and not completed. You can remove it from the index.jsx file.
+
 ## Features
 
 ### Single Page App
